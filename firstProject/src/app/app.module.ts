@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CoursesComponent } from './courses/courses.component';
-import { routing } from './app.routing';
+//import { routing } from './app.routing';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
-
+import { CoursesService } from './courses/courses.service';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    AppRoutingModule
+    //routing
   ],
-  providers: [],
+  providers: [CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
